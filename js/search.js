@@ -15,7 +15,7 @@
         appendString += '<img src="' + item.image + '" style="width:48px;height:auto;">';
         appendString += '</td>';
         appendString += '<td>';
-      	appendString += '<a href="localhost:4000' + item.location + '"><h1>' + item.title + '</h1></a>';
+      	appendString += '<a href="' + item.location + '"><h1>' + item.title + '</h1></a>';
         appendString += '</td>';
         appendString += '</tr>';
       }
