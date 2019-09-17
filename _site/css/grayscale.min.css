@@ -69,6 +69,16 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover}
+.search-section {
+    padding: 10rem 0;
+    width: 100%;
+    height: auto;
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.1)),color-stop(75%,rgba(22,22,22,.5)),to(#161616)),url(../img/stock-photo-closeup-pattern-background-of-many-different-wine-corks-with-dates-and-drops-of-wine-187463741.jpg);
+    background: linear-gradient(to bottom,rgba(22,22,22,.1) 0,rgba(22,22,22,.5) 75%,#161616 100%),url(../img/stock-photo-closeup-pattern-background-of-many-different-wine-corks-with-dates-and-drops-of-wine-187463741.jpg);
+    background-position: center
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover}
 .masthead h1 {
     font-family: 'Varela Round';
     font-size: 2.5rem;
@@ -97,6 +107,18 @@
     max-width: 30rem;
     font-size: 1.25rem}
 }
+
+#rotating_zodiac {
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 10s ease-in-out;
+          transition: transform 10s ease-in-out;
+}
+
+#rotating_zodiac:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .btn {
     -webkit-box-shadow: 0 .1875rem .1875rem 0 rgba(0,0,0,.1)!important;
     box-shadow: 0 .1875rem .1875rem 0 rgba(0,0,0,.1)!important;
@@ -202,4 +224,7 @@ a:focus,a:hover {
 .text-primary {
     color: #64a19d!important}
 footer {
-    padding: 5rem 0}
+    padding: 5rem 0;
+    bottom: 0;
+    width: 100%;
+}
