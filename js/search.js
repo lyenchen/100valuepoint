@@ -5,11 +5,22 @@
     if (results.length) { // Are there any results?
     	var appendString = '';
 
+      
+      appendString = '<table class="result-table">'
+
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
       	var item = store[results[i].ref];
-      	appendString += '<li><a href="localhost:4000' + item.location + '"><h3>' + item.title + '</h3></a>';
-      	appendString += '<p>' + item.location.substring(0, 150) + '...</p></li>';
+        appendString += '<tr>';
+        appendString += '<td>';
+        appendString += '<img src="' + item.image + '" style="width:48px;height:auto;">';
+        appendString += '</td>';
+        appendString += '<td>';
+      	appendString += '<a href="localhost:4000' + item.location + '"><h1>' + item.title + '</h1></a>';
+        appendString += '</td>';
+        appendString += '</tr>';
       }
+
+      appendString += '</table>';
 
       searchResults.innerHTML = appendString;
   } else {

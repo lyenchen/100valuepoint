@@ -24,8 +24,8 @@
 	"title": "Château Julien - 2016",
 	"category": "Château Julien",
 	"year": "2016",
-	"location": "/assets/Château Julien 2016-EN.pdf",
-	"image": "/img/chateaupreuillac.png",
+	"location": "/assets/Preuillac-2016-EN.pdf",
+	"image": "/img/emotion.png",
 },
 {
 	"title": "Château Mayne Blanc Cuvée Saint-Vincent - 2010",
@@ -73,8 +73,8 @@
 	"title": "Château Mayne Blanc Cuvée Saint-Vincent - 2016",
 	"category": "Château Mayne Blanc Cuvée Saint-Vincent",
 	"year": "2016",
-	"location": "/assets/Château Mayne Blanc Cuvée Saint Vincent 2016-EN.pdf",
-	"image": "/img/chateaupreuillac.png",
+	"location": "/assets/Esprit 2016-EN.pdf",
+	"image": "/img/esprit.png",
 },
 {
 	"title": "Château Mayne Blanc Cuvée Sommelier - 2014",
@@ -94,7 +94,7 @@
 	"title": "Château Mayne Blanc Cuvée Speciale - 2016",
 	"category": "Château Mayne Blanc Cuvée Speciale",
 	"year": "2016",
-	"location": "/assets/Château Mayne Blanc Cuvée Speciale 2016-EN.pdf",
+	"location": "/assets/Preuillac 2016-EN.pdf",
 	"image": "/img/chateaupreuillac.png",
 },
 {
@@ -186,7 +186,7 @@
 	"title": "L'essential de Mayne Blanc - 2016",
 	"category": "L'essential de Mayne Blanc",
 	"year": "2016",
-	"location": "/assets/L'Essentiel de Mayne Blanc 2009-EN.pdf",
+	"location": "/assets/Esprit 2016-EN.pdf",
 	"image": "/img/chateaupreuillac.png",
 }
 ]
