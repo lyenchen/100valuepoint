@@ -17,7 +17,8 @@
 			"{{ vintage.title }}": {
 				"title": "{{ vintage.title | xml_escape }}",
 				"category": "{{ vintage.category | xml_escape }}",
-				"location": "{{ vintage.location | xml_escape }}"
+				"location": "{{ vintage.location | xml_escape }}",
+				"image": "{{ vintage.image | xml_escape }}"
 			}
 			{% unless forloop.last %},{% endunless %}
 			{% endfor %}
