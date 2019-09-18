@@ -12,10 +12,10 @@
       	var item = store[results[i].ref];
         appendString += '<tr>';
         appendString += '<td>';
-        appendString += '<img src="' + item.image + '" style="width:48px;height:auto;">';
+        appendString += '<img src="./' + item.image + '" style="width:48px;height:auto;">';
         appendString += '</td>';
         appendString += '<td>';
-      	appendString += '<a href="' + item.location + '"><h1>' + item.title + '</h1></a>';
+      	appendString += '<a href="./' + item.location + '"><h1>' + item.title + '</h1></a>';
         appendString += '</td>';
         appendString += '</tr>';
       }
