@@ -69,6 +69,35 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover}
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+.flex-container {
+    max-width: 100%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.flex-container > div {
+    width: 100%;
+    margin: 10px;
+    border: 2px solid white;
+    text-align: center;
+}
+.flex-container h1 {
+    font-family: 'Varela Round';
+    font-size: 1.5rem;
+    color: white;
+}
+.flex-container p {
+    font-family: 'Varela Round';
+    font-size: 0.8rem;
+    color: white;
+    font-style: italic;
+}
 .search-section {
     padding: 10rem 0;
     width: 100%;
@@ -78,7 +107,8 @@
     background-position: center
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: cover}
+    background-size: cover;
+}
 .result-table {
     padding: 10rem 0;
 }

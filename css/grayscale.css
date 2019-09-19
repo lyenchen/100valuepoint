@@ -100,8 +100,13 @@
   background-size: cover;
 }
 
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
 .search-section {
-  padding: 10rem 0;
+    padding: 10rem 0;
     width: 100%;
     height: auto;
     background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.1)),color-stop(75%,rgba(22,22,22,.5)),to(#161616)),url(../img/stock-photo-closeup-pattern-background-of-many-different-wine-corks-with-dates-and-drops-of-wine-187463741.jpg);
@@ -109,7 +114,7 @@
     background-position: center
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: cover
+    background-size: cover;
 }
 
 .masthead .search-section h1 {
