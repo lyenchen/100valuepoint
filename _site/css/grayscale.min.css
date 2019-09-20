@@ -71,25 +71,26 @@
     background-size: cover}
 .responsive {
     max-width: 100%;
+    width: 18rem;
     height: auto;
 }
 .flex-container {
-    max-width: 100%;
+
     flex-direction: row;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
 }
 
 .flex-container > div {
     width: 100%;
-    margin: 10px;
+    margin: 1rem;
     border: 2px solid white;
     text-align: center;
 }
 .flex-container h1 {
     font-family: 'Varela Round';
     font-size: 1.5rem;
+    margin-top: 1rem;
     color: white;
 }
 .flex-container p {
@@ -181,11 +182,9 @@
 .btn-primary:active {
     background-color: #467370!important}
 .about-section {
-    padding-top: 10rem;
+    padding-top: 5rem;
     background: -webkit-gradient(linear,left top,left bottom,from(#161616),color-stop(75%,rgba(22,22,22,.9)),to(rgba(22,22,22,.8)));
     background: linear-gradient(to bottom,#161616 0,rgba(22,22,22,.9) 75%,rgba(22,22,22,.8) 100%)}
-.about-section p {
-    margin-bottom: 5rem}
 .projects-section {
     padding: 10rem 0}
 .projects-section .featured-text {
