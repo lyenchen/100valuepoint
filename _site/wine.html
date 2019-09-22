@@ -51,81 +51,31 @@
     </div>
   </nav>
 
-<section id="search" class="search-section">
-	<div class="container d-flex h-100 align-items-center">
-      	<div class="mx-auto text-center">
-			<form class="form-inline d-flex" action="http://localhost:4000/search.html" method="get">
-				<!--<h2 class="text-white mb-5"><label for="search-box">Search</label></h2>-->
-				<input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="search-box" name="query">
-				<button type="submit" class="btn btn-primary mx-auto" value="search">Search</button>
-			</form>
-		</div>
-	</div>
+<p id="wineid"></p>
 
-	<ul id="search-results"></ul>
 
-	<script>
-		window.store = {
-			
-			"1": {
-				"id": "1",
-				"title": "abc def xyz",
-				"vintage": "2013",
-				"category": "red",
-				"country": "France",
-				"region": "Bordeaux",
-				"grapevariety": "merlot",
-				"valuepoint": "67",
-				"image": "/img/chateaupreuillac.png"
-			}
-			,
-			
-			"2": {
-				"id": "2",
-				"title": "def def def abc",
-				"vintage": "2013",
-				"category": "red",
-				"country": "France",
-				"region": "Bordeaux",
-				"grapevariety": "merlot",
-				"valuepoint": "77",
-				"image": "/img/chateaupreuillac.png"
-			}
-			,
-			
-			"3": {
-				"id": "3",
-				"title": "xyz xyz xyz xyz",
-				"vintage": "2013",
-				"category": "red",
-				"country": "France",
-				"region": "Bordeaux",
-				"grapevariety": "merlot",
-				"valuepoint": "87",
-				"image": "/img/chateaupreuillac.png"
-			}
-			,
-			
-			"4": {
-				"id": "4",
-				"title": "abc abc abc abc",
-				"vintage": "2013",
-				"category": "red",
-				"country": "France",
-				"region": "Bordeaux",
-				"grapevariety": "merlot",
-				"valuepoint": "97",
-				"image": "/img/chateaupreuillac.png"
-			}
-			
-			
-		};
-		
-	</script>
-	<script src="js/lunr.min.js"></script>
-	<script src="js/search.js"></script> 
+<script type="text/javascript">
+	currenturl = window.location.href;
+	let searchParams = new URLSearchParams(currenturl.split('?')[1]);
+	document.getElementById("wineid").innerHTML = searchParams.get('id');
+</script>
 
-</section>
+<!--<script type="text/javascript">
+	getParameterByName = function(url, name) {
+ 		if ("URLSearchParams" in window) {
+  		//Browser supports URLSearchParams
+  		let searchParams = new URLSearchParams(url.split('?')[1]);
+  		//return searchParams.get(name);
+  		return searchParams.get(name)
+ 	} else {
+  		document.write(
+   		"Your browser currently doesn't support URLSearchParams. Switch to another browser."
+  		);
+  		return null;
+ 	}
+	};
+</script>
+-->
 
 <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">

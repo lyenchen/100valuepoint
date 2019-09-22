@@ -14,10 +14,15 @@
 	<script>
 		window.store = {
 			{% for vintage in site.data.vintages %}
-			"{{ vintage.title }}": {
+			"{{ vintage.id }}": {
+				"id": "{{ vintage.id | xml_escape }}",
 				"title": "{{ vintage.title | xml_escape }}",
+				"vintage": "{{ vintage.vintage | xml_escape }}",
 				"category": "{{ vintage.category | xml_escape }}",
-				"location": "{{ vintage.location | xml_escape }}",
+				"country": "{{ vintage.country | xml_escape }}",
+				"region": "{{ vintage.region | xml_escape }}",
+				"grapevariety": "{{ vintage.grapevariety | xml_escape }}",
+				"valuepoint": "{{ vintage.valuepoint | xml_escape }}",
 				"image": "{{ vintage.image | xml_escape }}"
 			}
 			{% unless forloop.last %},{% endunless %}

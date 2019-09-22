@@ -12,10 +12,24 @@
       	var item = store[results[i].ref];
         appendString += '<tr>';
         appendString += '<td>';
-        appendString += '<img src="./' + item.image + '" style="width:48px;height:auto;">';
+        appendString += '<p>' + item.id + '</p>';
         appendString += '</td>';
         appendString += '<td>';
-      	appendString += '<a href="./' + item.location + '"><h1>' + item.title + '</h1></a>';
+        //appendString += '<img src="./' + item.image + '" style="width:48px;height:auto;">';
+        appendString += '<a href="./wine.html?id=' + item.id + '"><p>' + item.title + '</p></a>';
+        appendString += '</td>';
+        appendString += '<td>';
+      	//appendString += '<a href="./' + item.location + '"><h1>' + item.title + '</h1></a>';
+        appendString += '<p>' + item.vintage + '</p>';
+        appendString += '</td>';
+        appendString += '<td>';
+        appendString += '<p>' + item.region + '</p>';
+        appendString += '</td>';
+        appendString += '<td>';
+        appendString += '<p>' + item.grapevariety + '</p>';
+        appendString += '</td>';
+        appendString += '<td>';
+        appendString += '<p>' + item.valuepoint + '</p>';
         appendString += '</td>';
         appendString += '</tr>';
       }
@@ -49,17 +63,23 @@ if (searchTerm) {
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
     var idx = lunr(function () {
-    	this.field('id');
+    	//this.field('id');
     	this.field('title', { boost: 10 });
+      this.field('vintage');
     	this.field('category');
-    	this.field('location');
+    	this.field('country');
+      this.field('region');
+      this.field('grapevariety');
 
       for (var key in window.store) { // Add the data to lunr
       	this.add({
       		'id': key,
       		'title': window.store[key].title,
+          'vintage': window.store[key].vintage,
       		'category': window.store[key].category,
-      		'location': window.store[key].location
+      		'country': window.store[key].country,
+          'region': window.store[key].region,
+          'grapevariety': window.store[key].grapevariety
       	})
       }
   	});
