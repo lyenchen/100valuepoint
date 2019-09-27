@@ -1,26 +1,39 @@
 (function() {
+  
 	function displaySearchResults(results, store) {
 		var searchResults = document.getElementById('search-results');
 
     if (results.length) { // Are there any results?
     	var appendString = '';
-
       
       appendString = '<table class="result-table">'
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
       	var item = store[results[i].ref];
+        
         appendString += '<tr>';
         appendString += '<td>';
         appendString += '<p>' + item.id + '</p>';
         appendString += '</td>';
         appendString += '<td>';
+        appendString += '<a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\''+ item.title + '\',\'' + item.image + '\')"><p>' + item.title + '</p></a>';
+        appendString += '<div id="wineModal" class="modal fade" role="dialog">';
+        appendString += '<div class="modal-dialog">';
+        appendString += '<div id="wineModalContent" class="modal-content">';
+        //appendString += '<div class="modal-header">';
+        //appendString += '<h4 class="modal-title">' + item.title + '</h4>';
+        //appendString += '<button type="button" class="close" data-dismiss="modal">&times;</button>';
+        //appendString += '</div>';
+        //appendString += '<div class="modal-body">';
         //appendString += '<img src="./' + item.image + '" style="width:48px;height:auto;">';
-        appendString += '<a href="./wine.html?id=' + item.id + '"><p>' + item.title + '</p></a>';
+        //appendString += '<p>' + item.valuepoint + '</p>';
+        //appendString += '</div>';
+        appendString += '</div>';
+        appendString += '</div>';
+        appendString += '</div>'; 
         appendString += '</td>';
         appendString += '<td>';
-      	//appendString += '<a href="./' + item.location + '"><h1>' + item.title + '</h1></a>';
-        appendString += '<p>' + item.vintage + '</p>';
+      	appendString += '<p>' + item.vintage + '</p>';
         appendString += '</td>';
         appendString += '<td>';
         appendString += '<p>' + item.region + '</p>';
@@ -41,6 +54,18 @@
   	searchResults.innerHTML = '<li>No results found</li>';
   }
 }
+
+/*function displayWineInfo(wineTitle, wineImage) {
+  var headerDiv = document.createElement("div");
+
+  headerDiv.setAttribute("class","modal-header");
+  headerDiv.innerHTML("<h4 class='modal-title'>" + wineTitle +
+   "</h4><button type='button' class='close' data-dismiss='modal'>&times;</button>");
+
+
+  document.getElementById("wineModalContent").appendChild(contentDiv);
+
+}*/
 
 function getQueryVariable(variable) {
 	var query = window.location.search.substring(1);

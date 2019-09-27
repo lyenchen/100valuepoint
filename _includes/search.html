@@ -1,4 +1,5 @@
 <section id="search" class="search-section">
+	<!--<link href="css/winemodal.css" rel="stylesheet">-->
 	<div class="container d-flex h-100 align-items-center">
       	<div class="mx-auto text-center">
 			<form class="form-inline d-flex" action="{{ site.url }}/search.html" method="get">
@@ -29,6 +30,24 @@
 			{% endfor %}
 		};
 		
+		function displayWineInfo(wineTitle, wineImage) {
+			var parentDiv = document.getElementById("wineModalContent");
+			parentDiv.innerHTML = "";
+			var headerDiv = document.createElement("div");
+
+			headerDiv.setAttribute("class","modal-header");
+			headerDiv.innerHTML="<h4 class='modal-title'>" + wineTitle +
+			"</h4><button type='button' class='close' data-dismiss='modal'>&times;</button>";
+
+			parentDiv.appendChild(headerDiv);
+
+			var bodyDiv = document.createElement("div");
+			bodyDiv.setAttribute("class","modal-body");
+			bodyDiv.innerHTML="<img src=" + wineImage + " style='width:60px;height:auto;'>";
+
+			parentDiv.appendChild(bodyDiv);
+		}
+
 	</script>
 	<script src="js/lunr.min.js"></script>
 	<script src="js/search.js"></script> 
