@@ -210,11 +210,63 @@
 .btn-primary:active {
     background-color: #467370!important}
 .about-section {
+    position: relative;
     padding-top: 5rem;
-    min-height: 35rem;
+    padding-bottom: 5rem;
     width: 100%;
+    min-height: 35rem;
+    height: 100%;
     background: -webkit-gradient(linear,left top,left bottom,from(#161616),color-stop(75%,rgba(22,22,22,.9)),to(rgba(22,22,22,.8)));
-    background: linear-gradient(to bottom,#161616 0,rgba(22,22,22,.9) 75%,rgba(22,22,22,.8) 100%)}
+    background: linear-gradient(to bottom,#161616 0,rgba(22,22,22,.9) 75%,rgba(22,22,22,.8) 100%)
+}
+.about-section h2 {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    padding-bottom: 5rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+}
+.about-section p {
+    color: #fff;
+    text-align: left;
+}
+.about-section a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.about-section a:hover {
+  opacity: .5;
+}
+#about a{
+    padding-top: 5rem;
+}
+#about a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
 .projects-section {
     padding: 10rem 0}
 .projects-section .featured-text {
