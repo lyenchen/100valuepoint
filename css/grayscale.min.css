@@ -101,6 +101,9 @@
 }
 
 .top20-section {
+    position: relative;
+    min-height: 35rem;
+    padding: 15rem 0;
     background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.3)),color-stop(75%,rgba(22,22,22,.7)),to(#161616)),url(../img/stock-photo-the-word-top-written-in-vintage-metal-letterpress-type-on-a-soft-backlit-background-291004445.jpg);
     background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%,#161616 100%),url(../img/stock-photo-the-word-top-written-in-vintage-metal-letterpress-type-on-a-soft-backlit-background-291004445.jpg);
     background-position: center;
@@ -127,20 +130,21 @@
     font-family: 'Varela Round';
 }
 .result-table th {
-    text-align: left;
+    text-align: center;
     padding: 14px;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     color: #f2f2f2;
 }
 .result-table td {
-    text-align: left;
+    text-align: center;
     padding: 10px;
     border-bottom: 1px solid #ddd;
     font-size: 1rem;
     color: white;
 }
 .result-table a {
+    text-align: left;
     color: white;
 }
 .masthead h1 {
