@@ -6,36 +6,30 @@
     if (results.length) { // Are there any results?
     	var appendString = '';
       
-      appendString = '<table class="result-table">'
+      appendString = '<table class="result-table">';
+      appendString += '<tr>';
+      appendString += '<th>Wine Name</th>';
+      appendString += '<th>Vintage</th>';
+      appendString += '<th>Value Point</th>';
+      appendString += '</tr>';
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
       	var item = store[results[i].ref];
+        var param =  item.title + "','" + item.image + "','" + item.vintage + "','" + item.producer + "','" 
+          + item.country + "','" + item.region + "','" + item.subregion + "','" + item.tastingnotes;
         
         appendString += '<tr>';
         appendString += '<td>';
-        appendString += '<p>' + item.id + '</p>';
-        appendString += '</td>';
-        appendString += '<td>';
-        appendString += '<a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\''+ item.title + '\',\'' + item.image + '\')"><p>' + item.title + '</p></a>';
+        appendString += '<a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + item.title + '</a>';
         appendString += '<div id="wineModal" class="modal fade" role="dialog">';
-        appendString += '<div class="modal-dialog">';
-        appendString += '<div id="wineModalContent" class="modal-content">';
+        appendString += '<div class="modal-dialog modal-lg">';
+        appendString += '<div id="wineModalContent" class="container modal-content">';
         appendString += '</div>';
         appendString += '</div>';
         appendString += '</div>'; 
         appendString += '</td>';
-        appendString += '<td>';
-      	appendString += '<p>' + item.vintage + '</p>';
-        appendString += '</td>';
-        appendString += '<td>';
-        appendString += '<p>' + item.region + '</p>';
-        appendString += '</td>';
-        appendString += '<td>';
-        appendString += '<p>' + item.grapevariety + '</p>';
-        appendString += '</td>';
-        appendString += '<td>';
-        appendString += '<p>' + item.valuepoint + '</p>';
-        appendString += '</td>';
+        appendString += '<td>'+ item.vintage + '</td>';
+        appendString += '<td>'+ item.valuepoint + '</td>';
         appendString += '</tr>';
       }
 
@@ -46,18 +40,6 @@
   	searchResults.innerHTML = '<li>No results found</li>';
   }
 }
-
-/*function displayWineInfo(wineTitle, wineImage) {
-  var headerDiv = document.createElement("div");
-
-  headerDiv.setAttribute("class","modal-header");
-  headerDiv.innerHTML("<h4 class='modal-title'>" + wineTitle +
-   "</h4><button type='button' class='close' data-dismiss='modal'>&times;</button>");
-
-
-  document.getElementById("wineModalContent").appendChild(contentDiv);
-
-}*/
 
 function getQueryVariable(variable) {
 	var query = window.location.search.substring(1);

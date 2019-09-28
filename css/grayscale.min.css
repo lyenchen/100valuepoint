@@ -99,8 +99,15 @@
     color: white;
     font-style: italic;
 }
+
+/*.top20-section {
+    padding-top: 5rem;
+    background: -webkit-gradient(linear,left top,left bottom,from(#161616),color-stop(75%,rgba(22,22,22,.9)),to(rgba(22,22,22,.8)),url(../img/stock-photo-the-word-top-written-in-vintage-metal-letterpress-type-on-a-soft-backlit-background-291004445.jpg);
+    background: linear-gradient(to bottom,#161616 0,rgba(22,22,22,.9) 75%,rgba(22,22,22,.8) 100%),url(../img/stock-photo-the-word-top-written-in-vintage-metal-letterpress-type-on-a-soft-backlit-background-291004445.jpg);
+}
+*/
 .search-section {
-    padding: 10rem 0;
+    padding: 10rem 14rem;
     width: 100%;
     height: auto;
     background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.1)),color-stop(75%,rgba(22,22,22,.5)),to(#161616)),url(../img/stock-photo-closeup-pattern-background-of-many-different-wine-corks-with-dates-and-drops-of-wine-187463741.jpg);
@@ -110,17 +117,27 @@
     background-attachment: scroll;
     background-size: cover;
 }
+
 .result-table {
-    padding: 10rem 0;
-}
-.result-table a {
+    width: 100%;
+    padding-top: 20px;
     font-family: 'Varela Round';
+}
+.result-table th {
+    text-align: left;
+    padding: 14px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    color: #f2f2f2;
+}
+.result-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
     font-size: 1rem;
     color: white;
 }
-.result-table p {
-    font-family: 'Varela Round';
-    font-size: 1rem;
+.result-table a {
     color: white;
 }
 .masthead h1 {
