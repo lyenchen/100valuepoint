@@ -1,4 +1,3 @@
-(function() {
 
 function displayWineInfo(wineTitle, wineImage, wineVintage, wineProducer, wineCountry, wineRegion, wineSubRegion, wineTastingNotes) {
     var parentDiv = document.getElementById("wineModalContent");
@@ -16,7 +15,7 @@ function displayWineInfo(wineTitle, wineImage, wineVintage, wineProducer, wineCo
 
     var bodyImgDiv = document.createElement("div");
     bodyImgDiv.setAttribute("class","col-sm-4");
-    bodyImgDiv.innerHTML="<img src=" + "{{ site.url }}/" + wineImage + " style='width:120px;height:auto;'>";
+    bodyImgDiv.innerHTML="<img src=" + wineImage + " style='width:120px;height:auto;'>";
     // bodyDiv.innerHTML += "<p>Vintage:" + wineVintage + "</p>";
 
     rowDiv.appendChild(bodyImgDiv);
@@ -37,7 +36,4 @@ function displayWineInfo(wineTitle, wineImage, wineVintage, wineProducer, wineCo
     rowDiv.appendChild(bodyTxtDiv);
 
     parentDiv.appendChild(rowDiv);
-
 }
-
-})();
