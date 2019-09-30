@@ -1,4 +1,27 @@
 <section id="ourwine" class="ourwine-section bg-light">
+  <script type="text/javascript">
+    function displayWineByValuePoint(valuepointrange){
+      var appendString = '';
+      
+      appendString = '<table class="result-table">';
+      appendString += '<tr>';
+      appendString += '<th>Wine Name</th>';
+      appendString += '<th>Vintage</th>';
+      appendString += '<th>Value Point</th>';
+      appendString += '</tr>';
+      {% assign filtered_wine = site.data.vintages | where: 'valuepointrange', valuepointrange %}
+      {% for wine in filtered_wine %}
+        appendString += '<tr>';
+        appendString += '<td>' + wine.title + '</td>';
+        appendString += '<td>'+ item.vintage + '</td>';
+        appendString += '<td>'+ item.valuepoint + '</td>';
+        appendString += '</tr>';
+      {% endfor %}
+      appendString += '</table>';
+
+      wines.innerHTML = appendString;
+    }
+  </script>
     <div class="container d-flex h-100 align-items-center">
     	<div class="mx-auto text-center">
         	<table class="result-table">
@@ -8,10 +31,11 @@
       			{% assign wines = site.data.vintages | map: 'valuepointrange' | uniq | sort | reverse %}
         		{% for wine in wines %}
         		<tr>
-      				<td>{{ wine }}</td>
+      				<td><a href="#wines" onClick="displayWineByValuePointRange('{{ wine }}')">{{ wine }}</td>
       			</tr>
         		{% endfor %}
         	</table>
       	</div>
     </div>
+    <div id="wines" class="container"></div>
 </section>

@@ -195,6 +195,59 @@
 
   <!-- Our Wine Section -->
   <section id="ourwine" class="ourwine-section bg-light">
+  <script type="text/javascript">
+    function displayWineByValuePoint(valuepointrange){
+      var appendString = '';
+      
+      appendString = '<table class="result-table">';
+      appendString += '<tr>';
+      appendString += '<th>Wine Name</th>';
+      appendString += '<th>Vintage</th>';
+      appendString += '<th>Value Point</th>';
+      appendString += '</tr>';
+      
+      
+        appendString += '<tr>';
+        appendString += '<td>' + wine.title + '</td>';
+        appendString += '<td>'+ item.vintage + '</td>';
+        appendString += '<td>'+ item.valuepoint + '</td>';
+        appendString += '</tr>';
+      
+        appendString += '<tr>';
+        appendString += '<td>' + wine.title + '</td>';
+        appendString += '<td>'+ item.vintage + '</td>';
+        appendString += '<td>'+ item.valuepoint + '</td>';
+        appendString += '</tr>';
+      
+        appendString += '<tr>';
+        appendString += '<td>' + wine.title + '</td>';
+        appendString += '<td>'+ item.vintage + '</td>';
+        appendString += '<td>'+ item.valuepoint + '</td>';
+        appendString += '</tr>';
+      
+        appendString += '<tr>';
+        appendString += '<td>' + wine.title + '</td>';
+        appendString += '<td>'+ item.vintage + '</td>';
+        appendString += '<td>'+ item.valuepoint + '</td>';
+        appendString += '</tr>';
+      
+        appendString += '<tr>';
+        appendString += '<td>' + wine.title + '</td>';
+        appendString += '<td>'+ item.vintage + '</td>';
+        appendString += '<td>'+ item.valuepoint + '</td>';
+        appendString += '</tr>';
+      
+        appendString += '<tr>';
+        appendString += '<td>' + wine.title + '</td>';
+        appendString += '<td>'+ item.vintage + '</td>';
+        appendString += '<td>'+ item.valuepoint + '</td>';
+        appendString += '</tr>';
+      
+      appendString += '</table>';
+
+      wines.innerHTML = appendString;
+    }
+  </script>
     <div class="container d-flex h-100 align-items-center">
     	<div class="mx-auto text-center">
         	<table class="result-table">
@@ -204,20 +257,21 @@
       			
         		
         		<tr>
-      				<td>96-100</td>
+      				<td><a href="#wines" onClick="displayWineByValuePointRange('96-100')">96-100</td>
       			</tr>
         		
         		<tr>
-      				<td>86-90</td>
+      				<td><a href="#wines" onClick="displayWineByValuePointRange('86-90')">86-90</td>
       			</tr>
         		
         		<tr>
-      				<td>76-80</td>
+      				<td><a href="#wines" onClick="displayWineByValuePointRange('76-80')">76-80</td>
       			</tr>
         		
         	</table>
       	</div>
     </div>
+    <div id="wines" class="container"></div>
 </section>
   <!-- Signup Section -->
   
