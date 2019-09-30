@@ -27,8 +27,7 @@ function displayWineInfo(wineTitle, wineImage, wineVintage, wineProducer, wineCo
     bodyTable.innerHTML = "<tr><td>Vintage:</td><td>" + wineVintage + "</td></tr>"
     bodyTable.innerHTML += "<tr><td>Producer:</td><td>" + wineProducer + "</td></tr>"
     bodyTable.innerHTML += "<tr><td>Country:</td><td>" + wineCountry + "</td></tr>"
-    bodyTable.innerHTML += "<tr><td>Region:</td><td>" + wineRegion + "</td></tr>"
-    bodyTable.innerHTML += "<tr><td>Sub Region:</td><td>" + wineSubRegion + "</td></tr>"
+    bodyTable.innerHTML += "<tr><td>Region:</td><td>" + wineSubRegion + ", " + wineRegion + "</td></tr>"
     bodyTable.innerHTML += "<tr><td>Tasting Notes:</td><td>" + wineTastingNotes + "</td></tr>"
     
     bodyTxtDiv.appendChild(bodyTable);

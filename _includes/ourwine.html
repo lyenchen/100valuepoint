@@ -1,0 +1,17 @@
+<section id="ourwine" class="ourwine-section bg-light">
+    <div class="container d-flex h-100 align-items-center">
+    	<div class="mx-auto text-center">
+        	<table class="result-table">
+        		<tr>
+      				<th>By Value Point</th>
+      			</tr>
+      			{% assign wines = site.data.vintages | map: 'valuepointrange' | uniq | sort | reverse %}
+        		{% for wine in wines %}
+        		<tr>
+      				<td>{{ wine }}</td>
+      			</tr>
+        		{% endfor %}
+        	</table>
+      	</div>
+    </div>
+</section>
