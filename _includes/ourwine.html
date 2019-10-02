@@ -3,7 +3,6 @@
     function displayWineByValuePointRange(valuerange){
     	wines.innerHTML
       	var appendString = '';
-      	var resultString = '';
       
       	appendString = '<table class="result-table">';
       	appendString += '<tr>';
@@ -12,14 +11,13 @@
       	appendString += '<th>Value Point</th>';
       	appendString += '</tr>';
       	{% assign filtered_wine = site.data.vintages | where: "valuepointrange", valuerange %}
-      		appendString += '<tr>'
-      	{% for item in filtered_wine %}
+      	{% tablerow wine in filtered_wine %}
         	appendString += '<tr>';
         	appendString += '<td>' + '{{ item.title }}' + '</td>';
         	appendString += '<td>' + '{{ item.vintage }}' + '</td>';
         	appendString += '<td>' + '{{ item.valuepoint }}' + '</td>';
         	appendString += '</tr>';
-      	{% endfor %}
+      	{% endtablerow %}
       	appendString += '</table>';
 
       	wines.innerHTML = appendString;
