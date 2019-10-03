@@ -2,7 +2,7 @@
 <script src="js/winemodal.js"></script>
 <script type="text/javascript">
 	var jsonObj = JSON.parse('{{ site.data.vintages | jsonify }}');
-	function displayWineByValuePointRange(valuerange) {
+	function displayWineByCategory(category, categoryvalue) {
 		var parentDiv = document.getElementById('winesDiv');
 		parentDiv.innerHTML = '';
 		
@@ -12,7 +12,7 @@
 		innerHTML += '<tr><th>Wine Name</th><th>Vintage</th><th>Value Point</th></tr>';
 
 		for (var i = 0; i < jsonObj.length; i++) {
-			if (jsonObj[i].valuepointrange == valuerange) {
+			if (jsonObj[i][category] == categoryvalue) {
 				var param = jsonObj[i].title + "','" + '{{ site.url }}' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
 				innerHTML += '<tr>';
 				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a>';
@@ -30,58 +30,6 @@
 		//parentDiv.appendChild(resultTable);
 		parentDiv.innerHTML = innerHTML;
 	}
-
-	function displayWineByPriceRange(pricerange) {
-		var parentDiv = document.getElementById('winesDiv');
-		parentDiv.innerHTML = '';
-		
-		var innerHTML = '<table class="result-table">';
-		innerHTML += '<tr><th>Wine Name</th><th>Vintage</th><th>Value Point</th></tr>';
-
-		for (var i = 0; i < jsonObj.length; i++) {
-			if (jsonObj[i].pricerange == pricerange) {
-				var param = jsonObj[i].title + "','" + '{{ site.url }}' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
-				innerHTML += '<tr>';
-				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a>';
-				innerHTML += '<div id="wineModal" class="modal fade" role="dialog">';
-        		innerHTML += '<div class="modal-dialog modal-lg">';
-        		innerHTML += '<div id="wineModalContent" class="container modal-content">';
-        		innerHTML += '</div></div></div></td>';
-				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
-				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
-				innerHTML += '</tr>';
-			}
-		}
-		innerHTML += '</table>';
-
-		parentDiv.innerHTML = innerHTML;
-	}
-
-	function displayWineByProducer(producer) {
-		var parentDiv = document.getElementById('winesDiv');
-		parentDiv.innerHTML = '';
-		
-		var innerHTML = '<table class="result-table">';
-		innerHTML += '<tr><th>Wine Name</th><th>Vintage</th><th>Value Point</th></tr>';
-
-		for (var i = 0; i < jsonObj.length; i++) {
-			if (jsonObj[i].producer == producer) {
-				var param = jsonObj[i].title + "','" + '{{ site.url }}' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
-				innerHTML += '<tr>';
-				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a>';
-				innerHTML += '<div id="wineModal" class="modal fade" role="dialog">';
-        		innerHTML += '<div class="modal-dialog modal-lg">';
-        		innerHTML += '<div id="wineModalContent" class="container modal-content">';
-        		innerHTML += '</div></div></div></td>';
-				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
-				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
-				innerHTML += '</tr>';
-			}
-		}
-		innerHTML += '</table>';
-
-		parentDiv.innerHTML = innerHTML;
-	}
 </script>
 
 <section id="ourwine" class="ourwine-section bg-light">
@@ -93,7 +41,7 @@
       				{% assign wines = site.data.vintages | map: 'valuepointrange' | uniq | sort | reverse %}
         			{% for wine in wines %}
         			<tr>
-      					<td><a href="#ourwine" onClick="displayWineByValuePointRange('{{ wine }}')">{{ wine }}</a></td>
+      					<td><a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','{{ wine }}')">{{ wine }}</a></td>
       				</tr>
         			{% endfor %}
         		</table>
@@ -104,7 +52,7 @@
         			{% assign wines = site.data.vintages | map: 'pricerange' | uniq | sort %}
         			{% for wine in wines %}
         			<tr>
-      					<td><a href="#ourwine" onClick="displayWineByPriceRange('{{ wine }}')">{{ wine }}</a></td>
+      					<td><a href="#winesDiv" onClick="displayWineByCategory('pricerange','{{ wine }}')">{{ wine }}</a></td>
       				</tr>
         			{% endfor %}
         		</table>
@@ -115,7 +63,7 @@
         			{% assign wines = site.data.vintages | map: 'producer' | uniq | sort %}
         			{% for wine in wines %}
         			<tr>
-      					<td><a href="#ourwine" onClick="displayWineByProducer('{{ wine }}')">{{ wine }}</a></td>
+      					<td><a href="#winesDiv" onClick="displayWineByCategory('producer','{{ wine }}')">{{ wine }}</a></td>
       				</tr>
         			{% endfor %}
         		</table>
