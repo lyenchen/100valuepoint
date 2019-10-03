@@ -224,7 +224,8 @@
 }
 
 #winesDiv {
-    padding: 12rem;
+    position: relative;
+    padding: 5rem;
 }
 
 #rotating_zodiac {

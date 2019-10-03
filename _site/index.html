@@ -209,9 +209,13 @@
 
 		for (var i = 0; i < jsonObj.length; i++) {
 			if (jsonObj[i].valuepointrange == valuerange) {
-				var param = jsonObj[i].title + "','" + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
+				var param = jsonObj[i].title + "','" + 'http://localhost:4000' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
 				innerHTML += '<tr>';
-				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a></td>';
+				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a>';
+				innerHTML += '<div id="wineModal" class="modal fade" role="dialog">';
+        		innerHTML += '<div class="modal-dialog modal-lg">';
+        		innerHTML += '<div id="wineModalContent" class="container modal-content">';
+        		innerHTML += '</div></div></div></td>';
 				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
 				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
 				innerHTML += '</tr>';
@@ -232,9 +236,13 @@
 
 		for (var i = 0; i < jsonObj.length; i++) {
 			if (jsonObj[i].pricerange == pricerange) {
-				var param = jsonObj[i].title + "','" + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
+				var param = jsonObj[i].title + "','" + 'http://localhost:4000' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
 				innerHTML += '<tr>';
-				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a></td>';
+				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a>';
+				innerHTML += '<div id="wineModal" class="modal fade" role="dialog">';
+        		innerHTML += '<div class="modal-dialog modal-lg">';
+        		innerHTML += '<div id="wineModalContent" class="container modal-content">';
+        		innerHTML += '</div></div></div></td>';
 				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
 				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
 				innerHTML += '</tr>';
@@ -254,9 +262,13 @@
 
 		for (var i = 0; i < jsonObj.length; i++) {
 			if (jsonObj[i].producer == producer) {
-				var param = jsonObj[i].title + "','" + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
+				var param = jsonObj[i].title + "','" + 'http://localhost:4000' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
 				innerHTML += '<tr>';
-				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a></td>';
+				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a>';
+				innerHTML += '<div id="wineModal" class="modal fade" role="dialog">';
+        		innerHTML += '<div class="modal-dialog modal-lg">';
+        		innerHTML += '<div id="wineModalContent" class="container modal-content">';
+        		innerHTML += '</div></div></div></td>';
 				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
 				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
 				innerHTML += '</tr>';
