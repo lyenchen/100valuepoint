@@ -200,6 +200,32 @@
     color: white;
 }
 
+.category-table {
+    width: 100%;
+    padding-top: 20px;
+    font-family: 'Varela Round';
+}
+.category-table th {
+    text-align: center;
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    color: #f2f2f2;
+}
+.category-table td {
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+}
+.category-table a {
+    text-align: left;
+    color: white;
+}
+
+#winesDiv {
+    padding: 12rem;
+}
 
 #rotating_zodiac {
   border-radius: 50%;

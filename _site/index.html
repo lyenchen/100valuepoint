@@ -194,87 +194,143 @@
 </section>
 
   <!-- Our Wine Section -->
-  <section id="ourwine" class="ourwine-section bg-light">
-  	<script type="text/javascript">
-    function displayWineByValuePointRange(valuerange){
-    	wines.innerHTML
-      	var appendString = '';
-      
-      	appendString = '<table class="result-table">';
-      	appendString += '<tr>';
-      	appendString += '<th>Wine Name</th>';
-      	appendString += '<th>Vintage</th>';
-      	appendString += '<th>Value Point</th>';
-      	appendString += '</tr>';
-      	
-      	<tr class="row1">
-<td class="col1">
-        	appendString += '<tr>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '</tr>';
-      	</td><td class="col2">
-        	appendString += '<tr>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '</tr>';
-      	</td><td class="col3">
-        	appendString += '<tr>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '</tr>';
-      	</td><td class="col4">
-        	appendString += '<tr>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '</tr>';
-      	</td><td class="col5">
-        	appendString += '<tr>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '</tr>';
-      	</td><td class="col6">
-        	appendString += '<tr>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '<td>' + '' + '</td>';
-        	appendString += '</tr>';
-      	</td></tr>
+  <link href="css/winemodal.css" rel="stylesheet">
+<script src="js/winemodal.js"></script>
+<script type="text/javascript">
+	var jsonObj = JSON.parse('[{"id":"1","title":"Château Preuillac abcdefg qwerty","category":"red","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"99","valuepointrange":"96-100","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"2","title":"Château Julien","category":"red","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"89","valuepointrange":"86-90","pricerange":"20-35€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"3","title":"Château Preuillac","category":"red","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"79","valuepointrange":"76-80","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"4","title":"Château Julien","category":"red","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"77","valuepointrange":"76-80","pricerange":"05-10€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"5","title":"Château Preuillac abcdefg qwerty","category":"red","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"6","title":"Château Julien","category":"red","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"}]');
+	function displayWineByValuePointRange(valuerange) {
+		var parentDiv = document.getElementById('winesDiv');
+		parentDiv.innerHTML = '';
+		
+		// var resultTable = document.createElement("table");
+		// resultTable.setAttribute("class","result-table");
+		var innerHTML = '<table class="result-table">';
+		innerHTML += '<tr><th>Wine Name</th><th>Vintage</th><th>Value Point</th></tr>';
 
-      	appendString += '</table>';
+		for (var i = 0; i < jsonObj.length; i++) {
+			if (jsonObj[i].valuepointrange == valuerange) {
+				var param = jsonObj[i].title + "','" + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
+				innerHTML += '<tr>';
+				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a></td>';
+				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
+				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
+				innerHTML += '</tr>';
+			}
+		}
+		innerHTML += '</table>';
+		//alert(innerHTML);
+		//parentDiv.appendChild(resultTable);
+		parentDiv.innerHTML = innerHTML;
+	}
 
-      	wines.innerHTML = appendString;
-    	}
-  	</script>
-    <div class="container d-flex h-100 align-items-center">
-    	<div class="mx-auto text-center">
-        	<table class="result-table">
-        		<tr>
-      				<th>By Value Point</th>
-      			</tr>
-      			
-        		
-        		<tr>
-      				<td><a href="#ourwine" onClick="displayWineByValuePointRange('96-100')">96-100</td>
-      			</tr>
-        		
-        		<tr>
-      				<td><a href="#ourwine" onClick="displayWineByValuePointRange('86-90')">86-90</td>
-      			</tr>
-        		
-        		<tr>
-      				<td><a href="#ourwine" onClick="displayWineByValuePointRange('76-80')">76-80</td>
-      			</tr>
-        		
-        	</table>
+	function displayWineByPriceRange(pricerange) {
+		var parentDiv = document.getElementById('winesDiv');
+		parentDiv.innerHTML = '';
+		
+		var innerHTML = '<table class="result-table">';
+		innerHTML += '<tr><th>Wine Name</th><th>Vintage</th><th>Value Point</th></tr>';
+
+		for (var i = 0; i < jsonObj.length; i++) {
+			if (jsonObj[i].pricerange == pricerange) {
+				var param = jsonObj[i].title + "','" + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
+				innerHTML += '<tr>';
+				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a></td>';
+				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
+				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
+				innerHTML += '</tr>';
+			}
+		}
+		innerHTML += '</table>';
+
+		parentDiv.innerHTML = innerHTML;
+	}
+
+	function displayWineByProducer(producer) {
+		var parentDiv = document.getElementById('winesDiv');
+		parentDiv.innerHTML = '';
+		
+		var innerHTML = '<table class="result-table">';
+		innerHTML += '<tr><th>Wine Name</th><th>Vintage</th><th>Value Point</th></tr>';
+
+		for (var i = 0; i < jsonObj.length; i++) {
+			if (jsonObj[i].producer == producer) {
+				var param = jsonObj[i].title + "','" + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
+				innerHTML += '<tr>';
+				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a></td>';
+				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
+				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
+				innerHTML += '</tr>';
+			}
+		}
+		innerHTML += '</table>';
+
+		parentDiv.innerHTML = innerHTML;
+	}
+</script>
+
+<section id="ourwine" class="ourwine-section bg-light">
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-4 mx-auto">
+        		<table class="category-table">
+        			<tr><th>By Value Point</th></tr>
+      				
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByValuePointRange('96-100')">96-100</a></td>
+      				</tr>
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByValuePointRange('86-90')">86-90</a></td>
+      				</tr>
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByValuePointRange('76-80')">76-80</a></td>
+      				</tr>
+        			
+        		</table>
+        	</div>
+        	<div class="col-lg-4 mx-auto">
+        		<table class="category-table">
+        			<tr><th>By Price Range</th></tr>
+        			
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByPriceRange('05-10€')">05-10€</a></td>
+      				</tr>
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByPriceRange('15-20€')">15-20€</a></td>
+      				</tr>
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByPriceRange('20-35€')">20-35€</a></td>
+      				</tr>
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByPriceRange('35-50€')">35-50€</a></td>
+      				</tr>
+        			
+        		</table>
+        	</div>
+        	<div class="col-lg-4 mx-auto">
+        		<table class="category-table">
+        			<tr><th>By Producer</th></tr>
+        			
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByProducer('Château Julien')">Château Julien</a></td>
+      				</tr>
+        			
+        			<tr>
+      					<td><a href="#ourwine" onClick="displayWineByProducer('Château Preuillac')">Château Preuillac</a></td>
+      				</tr>
+        			
+        		</table>
+        	</div>
       	</div>
     </div>
-    <div id="wines" class="container"></div>
+    <div id="winesDiv" class="container"></div>
 </section>
   <!-- Signup Section -->
   
