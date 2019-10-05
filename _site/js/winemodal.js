@@ -5,7 +5,7 @@ function displayWineInfo(wineTitle, wineValuePointImage, wineImage, wineVintage,
     var headerDiv = document.createElement("div");
 
     headerDiv.setAttribute("class","modal-header");
-    headerDiv.innerHTML = "<img src=" + wineValuePointImage + " style='width:60px;height:auto;'>";
+    headerDiv.innerHTML = "<img src=" + wineValuePointImage + " style='width:10%;height:auto;'>";
     headerDiv.innerHTML += "<h4 class='modal-title'>" + wineTitle +
     "</h4><button type='button' class='close' data-dismiss='modal'>&times;</button>";
 

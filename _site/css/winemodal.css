@@ -2,15 +2,37 @@
 
 .modal-header {
   color: black;
-  padding: 10px;
-
+  padding: 5px;
 }
 
 .modal-title {
   padding-left: 15px;
-  padding-top: 8px;
   text-align: center;
-  font-size: 2vw;
+  font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+  .modal-header {
+  color: black;
+  padding: 10px;
+  }
+  .modal-title {
+  padding-left: 15px;
+  text-align: center;
+  font-size: 3rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .modal-header {
+  color: black;
+  padding: 20px;
+  }
+  .modal-title {
+  padding-left: 15px;
+  text-align: center;
+  font-size: 3.2rem;
+  }
 }
 
 .modal-content {
