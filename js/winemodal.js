@@ -1,11 +1,12 @@
 
-function displayWineInfo(wineTitle, wineImage, wineVintage, wineProducer, wineCountry, wineRegion, wineSubRegion, wineTastingNotes) {
+function displayWineInfo(wineTitle, wineValuePointImage, wineImage, wineVintage, wineProducer, wineCountry, wineRegion, wineSubRegion, wineTastingNotes) {
     var parentDiv = document.getElementById("wineModalContent");
     parentDiv.innerHTML = "";
     var headerDiv = document.createElement("div");
 
     headerDiv.setAttribute("class","modal-header");
-    headerDiv.innerHTML="<h4 class='modal-title'>" + wineTitle +
+    headerDiv.innerHTML = "<img src=" + wineValuePointImage + " style='width:60px;height:auto;'>";
+    headerDiv.innerHTML += "<h4 class='modal-title'>" + wineTitle +
     "</h4><button type='button' class='close' data-dismiss='modal'>&times;</button>";
 
     parentDiv.appendChild(headerDiv);

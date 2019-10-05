@@ -15,8 +15,7 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
       	var item = store[results[i].ref];
-        var param =  item.title + "','" + item.image + "','" + item.vintage + "','" + item.producer + "','" 
-          + item.country + "','" + item.region + "','" + item.subregion + "','" + item.tastingnotes;
+        var param =  item.title + "','" + item.valuepointimage + "','" + item.image + "','" + item.vintage + "','" + item.producer + "','" + item.country + "','" + item.region + "','" + item.subregion + "','" + item.tastingnotes;
         
         appendString += '<tr>';
         appendString += '<td>';
@@ -69,6 +68,7 @@ if (searchTerm) {
     	this.field('country');
       this.field('region');
       this.field('grapevariety');
+      this.field('valuepoint');
 
       for (var key in window.store) { // Add the data to lunr
       	this.add({
@@ -78,7 +78,8 @@ if (searchTerm) {
       		'category': window.store[key].category,
       		'country': window.store[key].country,
           'region': window.store[key].region,
-          'grapevariety': window.store[key].grapevariety
+          'grapevariety': window.store[key].grapevariety,
+          'valuepoint': window.store[key].valuepoint
       	})
       }
   	});

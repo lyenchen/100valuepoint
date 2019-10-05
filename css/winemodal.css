@@ -2,6 +2,15 @@
 
 .modal-header {
   color: black;
+  padding: 10px;
+
+}
+
+.modal-title {
+  padding-left: 15px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 2.2rem;
 }
 
 .modal-content {
