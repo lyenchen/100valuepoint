@@ -69,6 +69,41 @@
         		</table>
         	</div>
       	</div>
+        <div class="row">
+          <div class="col-lg-4 mx-auto">
+            <table class="category-table">
+              <tr><th>By Country</th></tr>
+              {% assign wines = site.data.vintages | map: 'country' | uniq | sort %}
+              {% for wine in wines %}
+              <tr>
+                <td><a href="#winesDiv" onClick="displayWineByCategory('country','{{ wine }}')">{{ wine }}</a></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+          <div class="col-lg-4 mx-auto">
+            <table class="category-table">
+              <tr><th>By Region</th></tr>
+              {% assign wines = site.data.vintages | map: 'region' | uniq | sort %}
+              {% for wine in wines %}
+              <tr>
+                <td><a href="#winesDiv" onClick="displayWineByCategory('region','{{ wine }}')">{{ wine }}</a></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+          <div class="col-lg-4 mx-auto">
+            <table class="category-table">
+              <tr><th>By Wine Style</th></tr>
+              {% assign wines = site.data.vintages | map: 'category' | uniq | sort %}
+              {% for wine in wines %}
+              <tr>
+                <td><a href="#winesDiv" onClick="displayWineByCategory('category','{{ wine }}')">{{ wine }}</a></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
     </div>
     <div id="winesDiv" class="container"></div>
 </section>
