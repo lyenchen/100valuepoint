@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  function prevPage() {
+
+  }
+</script>
 <section id="top20" class="top20-section bg-light">
   <link href="css/winemodal.css" rel="stylesheet">
     <div class="container d-flex h-100 align-items-center">
@@ -9,21 +14,30 @@
       				<th>Value Point</th>
       			</tr>
       			{% assign wines = site.data.vintages | sort: 'valuepoint' | reverse %}
-        		{% for wine in wines limit:20 %}
-        		<tr>
-      				<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('{{ wine.title }}','{{ site.url }}{{ wine.valuepointimage }}','{{ site.url }}{{ wine.image }}','{{ wine.vintage }}','{{ wine.producer }}','{{ wine.country }}','{{ wine.region }}','{{ wine.subregion }}','{{ wine.tastingnotes }}')">{{ wine.title }}</a>
-                <div id="wineModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog modal-lg">
-                    <div id="wineModalContent" class="container modal-content">
+        		{% for wine in wines limit:10 %}
+            <div id="top10">
+        		  <script>
+                var top10 = [];
+                //https://www.geeksforgeeks.org/converting-json-text-to-javascript-object/
+                //https://gist.github.com/JJediny/a466eed62cee30ad45e2
+              </script>
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('{{ wine.title }}','{{ site.url }}{{ wine.valuepointimage }}','{{ site.url }}{{ wine.image }}','{{ wine.vintage }}','{{ wine.producer }}','{{ wine.country }}','{{ wine.region }}','{{ wine.subregion }}','{{ wine.tastingnotes }}')">{{ wine.title }}</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-      				<td>{{ wine.vintage }}</td>
-      				<td>{{ wine.valuepoint }}</td>
-      			</tr>
+                </td>
+      				  <td>{{ wine.vintage }}</td>
+      				  <td>{{ wine.valuepoint }}</td>
+      			  </tr>
+            </div>
         		{% endfor %}
         	</table>
+          <a href="javascript:prevPage()" id="btn_prev"><<</a>
+          <a href="javascript:nextPage()" id="btn_next">>></a>
       	</div>
     </div>
     <script src="js/winemodal.js"></script>
