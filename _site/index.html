@@ -20,6 +20,11 @@
 
   <!-- Custom styles for this template -->
   <link href="css/grayscale.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body id="page-top">
@@ -97,120 +102,176 @@
 </section>
 
   <!-- Top20 Section -->
-  <section id="top20" class="top20-section bg-light">
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css"></style>-->
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+
+<section id="top20" class="top20-section bg-light">
   <link href="css/winemodal.css" rel="stylesheet">
     <div class="container d-flex h-100 align-items-center">
-    	<div class="mx-auto text-center">
-        	<table class="result-table">
-        		<tr>
-      				<th>Wine Name</th>
-      				<th>Vintage</th>
-      				<th>Value Point</th>
-      			</tr>
+    	<div class="mx-auto text-center table-responsive">
+        	<table id="myTable" class="display table">
+            <thead>
+        		  <tr>
+      				  <th>Wine Name</th>
+      				  <th>Vintage</th>
+      				  <th>Value Point</th>
+      			  </tr>
+            </thead>
+            <tbody>
       			
         		
-        		<tr>
-      				<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Preuillac abcdefg qwerty','http://localhost:4000/img/99.png','http://localhost:4000/img/chateaupreuillac.png','2013','Château Preuillac','France','Bordeaux','Medoc','Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Preuillac abcdefg qwerty</a>
-                <div id="wineModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog modal-lg">
-                    <div id="wineModalContent" class="container modal-content">
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Preuillac abcdefg qwerty','http://localhost:4000/img/99.png','http://localhost:4000/img/chateaupreuillac.png','2013','Château Preuillac','France','Bordeaux','Medoc','Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Preuillac abcdefg qwerty</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-      				<td>2013</td>
-      				<td>99</td>
-      			</tr>
+                </td>
+      				  <td>2013</td>
+      				  <td>99</td>
+      			  </tr>
         		
-        		<tr>
-      				<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
-                <div id="wineModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog modal-lg">
-                    <div id="wineModalContent" class="container modal-content">
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Mayne Blanc','http://localhost:4000/img/99.png','http://localhost:4000/img/chateaupreuillac.png','2013','Château Mayne Blanc','France','Bordeaux','Medoc','Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Mayne Blanc</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-      				<td>2015</td>
-      				<td>97</td>
-      			</tr>
+                </td>
+      				  <td>2013</td>
+      				  <td>99</td>
+      			  </tr>
         		
-        		<tr>
-      				<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Preuillac abcdefg qwerty','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Preuillac','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Preuillac abcdefg qwerty</a>
-                <div id="wineModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog modal-lg">
-                    <div id="wineModalContent" class="container modal-content">
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-      				<td>2015</td>
-      				<td>97</td>
-      			</tr>
+                </td>
+      				  <td>2015</td>
+      				  <td>97</td>
+      			  </tr>
         		
-        		<tr>
-      				<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
-                <div id="wineModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog modal-lg">
-                    <div id="wineModalContent" class="container modal-content">
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-      				<td>2015</td>
-      				<td>95</td>
-      			</tr>
+                </td>
+      				  <td>2015</td>
+      				  <td>97</td>
+      			  </tr>
         		
-        		<tr>
-      				<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/98.png','http://localhost:4000/img/chateaupreuillac.png','2013','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
-                <div id="wineModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog modal-lg">
-                    <div id="wineModalContent" class="container modal-content">
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Preuillac abcdefg qwerty','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Preuillac','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Preuillac abcdefg qwerty</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-      				<td>2013</td>
-      				<td>88</td>
-      			</tr>
+                </td>
+      				  <td>2015</td>
+      				  <td>97</td>
+      			  </tr>
         		
-        		<tr>
-      				<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2014','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
-                <div id="wineModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog modal-lg">
-                    <div id="wineModalContent" class="container modal-content">
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Mayne Blanc','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Mayne Blanc','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Mayne Blanc</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-      				<td>2014</td>
-      				<td>77</td>
-      			</tr>
+                </td>
+      				  <td>2015</td>
+      				  <td>97</td>
+      			  </tr>
         		
-        		<tr>
-      				<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Preuillac','http://localhost:4000/img/96.png','http://localhost:4000/img/chateaupreuillac.png','2014','Château Preuillac','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Preuillac</a>
-                <div id="wineModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog modal-lg">
-                    <div id="wineModalContent" class="container modal-content">
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-      				<td>2014</td>
-      				<td>76</td>
-      			</tr>
+                </td>
+      				  <td>2015</td>
+      				  <td>95</td>
+      			  </tr>
         		
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2015','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+      				  <td>2015</td>
+      				  <td>95</td>
+      			  </tr>
+        		
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/98.png','http://localhost:4000/img/chateaupreuillac.png','2013','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+      				  <td>2013</td>
+      				  <td>88</td>
+      			  </tr>
+        		
+              <tr>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('Château Julien','http://localhost:4000/img/97.png','http://localhost:4000/img/chateaupreuillac.png','2014','Château Julien','France','Bordeaux','Medoc','Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.')">Château Julien</a>
+                  <div id="wineModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div id="wineModalContent" class="container modal-content">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+      				  <td>2014</td>
+      				  <td>77</td>
+      			  </tr>
+        		
+          </tbody>
         	</table>
+          <script>
+            $(document).ready(function(){
+              $('#myTable').dataTable({
+                "ordering": false,
+                "searching": false,
+                "info": false
+              });
+            });
+          </script>
       	</div>
     </div>
     <script src="js/winemodal.js"></script>
+    
 </section>
 
   <!-- Our Wine Section -->
   <link href="css/winemodal.css" rel="stylesheet">
 <script src="js/winemodal.js"></script>
 <script type="text/javascript">
-	var jsonObj = JSON.parse('[{"id":"1","title":"Château Preuillac abcdefg qwerty","category":"Red","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"99","valuepointrange":"96-100","valuepointimage":"/img/99.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"2","title":"Château Julien","category":"White","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"88","valuepointrange":"86-90","valuepointimage":"/img/98.png","pricerange":"20-35€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"3","title":"Château Preuillac","category":"Rosé","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"76","valuepointrange":"76-80","valuepointimage":"/img/96.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"4","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"77","valuepointrange":"76-80","valuepointimage":"/img/97.png","pricerange":"05-10€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"5","title":"Château Preuillac abcdefg qwerty","category":"Rosé","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"6","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"7","title":"Château Julien","category":"Rosé","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"95","valuepointrange":"91-95","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"}]');
+	var jsonObj = JSON.parse('[{"id":"1","title":"Château Preuillac abcdefg qwerty","category":"Red","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"99","valuepointrange":"96-100","valuepointimage":"/img/99.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"2","title":"Château Julien","category":"White","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"88","valuepointrange":"86-90","valuepointimage":"/img/98.png","pricerange":"20-35€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"3","title":"Château Preuillac","category":"Rosé","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"76","valuepointrange":"76-80","valuepointimage":"/img/96.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"4","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"77","valuepointrange":"76-80","valuepointimage":"/img/97.png","pricerange":"05-10€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"5","title":"Château Preuillac abcdefg qwerty","category":"Rosé","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"6","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"7","title":"Château Julien","category":"Rosé","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"95","valuepointrange":"91-95","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"8","title":"Château Mayne Blanc","category":"Rosé","producer":"Château Mayne Blanc","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"9","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"10","title":"Château Julien","category":"Rosé","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"95","valuepointrange":"91-95","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"11","title":"Château Mayne Blanc","category":"Red","producer":"Château Mayne Blanc","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"99","valuepointrange":"96-100","valuepointimage":"/img/99.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"12","title":"Château Julien","category":"White","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"68","valuepointrange":"86-90","valuepointimage":"/img/98.png","pricerange":"20-35€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"13","title":"Château Preuillac","category":"Rosé","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"66","valuepointrange":"76-80","valuepointimage":"/img/96.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"14","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"67","valuepointrange":"76-80","valuepointimage":"/img/97.png","pricerange":"05-10€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"}]');
 	function displayWineByCategory(category, categoryvalue) {
 		var parentDiv = document.getElementById('winesDiv');
 		parentDiv.innerHTML = '';
@@ -297,6 +358,10 @@
         			
         			<tr>
       					<td><a href="#winesDiv" onClick="displayWineByCategory('producer','Château Julien')">Château Julien</a></td>
+      				</tr>
+        			
+        			<tr>
+      					<td><a href="#winesDiv" onClick="displayWineByCategory('producer','Château Mayne Blanc')">Château Mayne Blanc</a></td>
       				</tr>
         			
         			<tr>
@@ -454,10 +519,6 @@
       Copyright &copy; Your Website 2019
     </div>
   </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
