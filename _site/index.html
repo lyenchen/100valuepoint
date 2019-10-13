@@ -101,14 +101,14 @@
 </section>
 
   <!-- Top20 Section -->
-  <link rel="stylesheet" href="css/jquery.dataTables.min.css"></style>
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 
 <section id="top20" class="top20-section bg-light">
   <link href="css/winemodal.css" rel="stylesheet">
     <div class="container d-flex h-100 align-items-center">
     	<div class="mx-auto text-center table-responsive">
-        	<table id="myTable" class="display table">
+        	<table id="top20Table" class="display table">
             <thead>
         		  <tr>
                 <th></th>
@@ -320,7 +320,7 @@
         	</table>
           <script>
             $(document).ready(function(){
-              $('#myTable').dataTable({
+              $('#top20Table').dataTable({
                 "lengthChange": false,
                 "ordering": false,
                 "searching": false,
@@ -336,7 +336,8 @@
 </section>
 
   <!-- Our Wine Section -->
-  <link href="css/winemodal.css" rel="stylesheet">
+  <link href="css/sidenav.css" rel="stylesheet">
+<link href="css/winemodal.css" rel="stylesheet">
 <script src="js/winemodal.js"></script>
 <script type="text/javascript">
 	var jsonObj = JSON.parse('[{"id":"1","title":"Château Preuillac abcdefg qwerty","category":"Red","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"99","valuepointrange":"96-100","valuepointimage":"/img/99.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"2","title":"Château Julien","category":"White","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"88","valuepointrange":"86-90","valuepointimage":"/img/98.png","pricerange":"20-35€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"3","title":"Château Preuillac","category":"Rosé","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"76","valuepointrange":"76-80","valuepointimage":"/img/96.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"4","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"77","valuepointrange":"76-80","valuepointimage":"/img/97.png","pricerange":"05-10€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"5","title":"Château Preuillac abcdefg qwerty","category":"Rosé","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"6","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"7","title":"Château Julien","category":"Rosé","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"95","valuepointrange":"91-95","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"8","title":"Château Mayne Blanc","category":"Rosé","producer":"Château Mayne Blanc","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"9","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"97","valuepointrange":"96-100","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"10","title":"Château Julien","category":"Rosé","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2015","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"95","valuepointrange":"91-95","valuepointimage":"/img/97.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"11","title":"Château Mayne Blanc","category":"Red","producer":"Château Mayne Blanc","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"99","valuepointrange":"96-100","valuepointimage":"/img/99.png","pricerange":"35-50€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"12","title":"Château Julien","category":"White","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2013","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"68","valuepointrange":"86-90","valuepointimage":"/img/98.png","pricerange":"20-35€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"13","title":"Château Preuillac","category":"Rosé","producer":"Château Preuillac","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine hasr esponded well to the warm er conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"66","valuepointrange":"76-80","valuepointimage":"/img/96.png","pricerange":"15-20€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"},{"id":"14","title":"Château Julien","category":"Sparkling","producer":"Château Julien","country":"France","region":"Bordeaux","subregion":"Medoc","classification":"Cru Bourgeois","vintage":"2014","grapevariety":"merlot","tastingnotes":"Riper and more exotic, this wine has responded well to the warmer conditions in 2015 and given it a little more juiciness with the Merlot fruit really shining through.The oak is still bold and stern and this gives this vintage a powerful edge. Inneed of another two or three years to mellow, this is a superb vintage for Preuillac.","zodiac":"Goat","guideprice":"10","valuepoint":"67","valuepointrange":"76-80","valuepointimage":"/img/97.png","pricerange":"05-10€","datetasted":"Nov 2018","producerlink":"www.chateaupreuillac.com","wheretobuy":"www.hnwines.co.uk","location":"/assets/Château Julien 2013-EN.pdf","image":"/img/chateaupreuillac.png"}]');
@@ -369,125 +370,58 @@
 		parentDiv.innerHTML = innerHTML;
 	}
 </script>
-
 <section id="ourwine" class="ourwine-section bg-light">
-    <div class="container">
-    	<div class="row">
-    		<div class="col-lg-4 mx-auto">
-        		<table class="category-table">
-        			<tr><th>By Value Point</th></tr>
-      				
+	<div class="container">
+		<div class="row">
+			<div class="sidenav col-md-2">
+				<button class="dropdown-btn">Value Point<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container">
+					
+	        		
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','96-100')">96-100</a>
         			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','96-100')">96-100</a></td>
-      				</tr>
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','91-95')">91-95</a>
         			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','91-95')">91-95</a></td>
-      				</tr>
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','86-90')">86-90</a>
         			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','86-90')">86-90</a></td>
-      				</tr>
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','76-80')">76-80</a>
         			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','76-80')">76-80</a></td>
-      				</tr>
+				</div>
+				<button class="dropdown-btn">Price<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container">
+					
+	    	    	
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('pricerange','35-50€')">35-50€</a>
         			
-        		</table>
-        	</div>
-        	<div class="col-lg-4 mx-auto">
-        		<table class="category-table">
-        			<tr><th>By Price Range</th></tr>
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('pricerange','20-35€')">20-35€</a>
         			
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('pricerange','15-20€')">15-20€</a>
         			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('pricerange','05-10€')">05-10€</a></td>
-      				</tr>
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('pricerange','05-10€')">05-10€</a>
         			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('pricerange','15-20€')">15-20€</a></td>
-      				</tr>
-        			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('pricerange','20-35€')">20-35€</a></td>
-      				</tr>
-        			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('pricerange','35-50€')">35-50€</a></td>
-      				</tr>
-        			
-        		</table>
-        	</div>
-        	<div class="col-lg-4 mx-auto">
-        		<table class="category-table">
-        			<tr><th>By Producer</th></tr>
-        			
-        			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('producer','Château Julien')">Château Julien</a></td>
-      				</tr>
-        			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('producer','Château Mayne Blanc')">Château Mayne Blanc</a></td>
-      				</tr>
-        			
-        			<tr>
-      					<td><a href="#winesDiv" onClick="displayWineByCategory('producer','Château Preuillac')">Château Preuillac</a></td>
-      				</tr>
-        			
-        		</table>
-        	</div>
-      	</div>
-        <div class="row">
-          <div class="col-lg-4 mx-auto">
-            <table class="category-table">
-              <tr><th>By Country</th></tr>
-              
-              
-              <tr>
-                <td><a href="#winesDiv" onClick="displayWineByCategory('country','France')">France</a></td>
-              </tr>
-              
-            </table>
-          </div>
-          <div class="col-lg-4 mx-auto">
-            <table class="category-table">
-              <tr><th>By Region</th></tr>
-              
-              
-              <tr>
-                <td><a href="#winesDiv" onClick="displayWineByCategory('region','Bordeaux')">Bordeaux</a></td>
-              </tr>
-              
-            </table>
-          </div>
-          <div class="col-lg-4 mx-auto">
-            <table class="category-table">
-              <tr><th>By Wine Style</th></tr>
-              
-              
-              <tr>
-                <td><a href="#winesDiv" onClick="displayWineByCategory('category','Red')">Red</a></td>
-              </tr>
-              
-              <tr>
-                <td><a href="#winesDiv" onClick="displayWineByCategory('category','Rosé')">Rosé</a></td>
-              </tr>
-              
-              <tr>
-                <td><a href="#winesDiv" onClick="displayWineByCategory('category','Sparkling')">Sparkling</a></td>
-              </tr>
-              
-              <tr>
-                <td><a href="#winesDiv" onClick="displayWineByCategory('category','White')">White</a></td>
-              </tr>
-              
-            </table>
-          </div>
-        </div>
-    </div>
-    <div id="winesDiv" class="container"></div>
+				</div>
+			</div>
+			<div id="winesDiv" class="col-md-10">
+			</div>
+		</div>
+	</div>
+	<script>
+		/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+		  dropdown[i].addEventListener("click", function() {
+		  this.classList.toggle("active");
+		  var dropdownContent = this.nextElementSibling;
+		  if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+		  } else {
+		  dropdownContent.style.display = "block";
+		  }
+		  });
+		}
+	</script>
 </section>
   <!-- Signup Section -->
   

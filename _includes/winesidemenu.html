@@ -1,0 +1,75 @@
+<link href="css/sidenav.css" rel="stylesheet">
+<link href="css/winemodal.css" rel="stylesheet">
+<script src="js/winemodal.js"></script>
+<script type="text/javascript">
+	var jsonObj = JSON.parse('{{ site.data.vintages | jsonify }}');
+	function displayWineByCategory(category, categoryvalue) {
+		var parentDiv = document.getElementById('winesDiv');
+		parentDiv.innerHTML = '';
+		
+		// var resultTable = document.createElement("table");
+		// resultTable.setAttribute("class","result-table");
+		var innerHTML = '<table class="result-table">';
+		innerHTML += '<tr><th>Wine Name</th><th>Vintage</th><th>Value Point</th></tr>';
+
+		for (var i = 0; i < jsonObj.length; i++) {
+			if (jsonObj[i][category] == categoryvalue) {
+				var param = jsonObj[i].title + "','" + '{{ site.url }}' + jsonObj[i].valuepointimage + "','" + '{{ site.url }}' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
+				innerHTML += '<tr>';
+				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a>';
+				innerHTML += '<div id="wineModal" class="modal fade" role="dialog">';
+        		innerHTML += '<div class="modal-dialog modal-lg">';
+        		innerHTML += '<div id="wineModalContent" class="container modal-content">';
+        		innerHTML += '</div></div></div></td>';
+				innerHTML += '<td>' + jsonObj[i].vintage + '</td>';
+				innerHTML += '<td>' + jsonObj[i].valuepoint + '</td>';
+				innerHTML += '</tr>';
+			}
+		}
+		innerHTML += '</table>';
+		//alert(innerHTML);
+		//parentDiv.appendChild(resultTable);
+		parentDiv.innerHTML = innerHTML;
+	}
+</script>
+<section id="ourwine" class="ourwine-section bg-light">
+	<div class="container">
+		<div class="row">
+			<div class="sidenav col-md-2">
+				<button class="dropdown-btn">Value Point<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container">
+					{% assign wines = site.data.vintages | map: 'valuepointrange' | uniq | sort | reverse %}
+	        		{% for wine in wines %}
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','{{ wine }}')">{{ wine }}</a>
+        			{% endfor %}
+				</div>
+				<button class="dropdown-btn">Price<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container">
+					{% assign wines = site.data.vintages | map: 'pricerange' | uniq | sort | reverse %}
+	    	    	{% for wine in wines %}
+    	    			<a href="#winesDiv" onClick="displayWineByCategory('pricerange','{{ wine }}')">{{ wine }}</a>
+        			{% endfor %}
+				</div>
+			</div>
+			<div id="winesDiv" class="col-md-10">
+			</div>
+		</div>
+	</div>
+	<script>
+		/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+		  dropdown[i].addEventListener("click", function() {
+		  this.classList.toggle("active");
+		  var dropdownContent = this.nextElementSibling;
+		  if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+		  } else {
+		  dropdownContent.style.display = "block";
+		  }
+		  });
+		}
+	</script>
+</section>
