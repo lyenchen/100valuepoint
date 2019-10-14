@@ -140,8 +140,7 @@
     min-height: 35rem;
     width: 100%;
     height: auto;
-    background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.3)),color-stop(75%,rgba(22,22,22,.7)),to(#161616)),url(../img/stock-photo-the-word-top-written-in-vintage-metal-letterpress-type-on-a-soft-backlit-background-291004445.jpg);
-    background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%,#161616 100%),url(../img/stock-photo-the-word-top-written-in-vintage-metal-letterpress-type-on-a-soft-backlit-background-291004445.jpg);
+    background: url(../img/stock-photo-the-word-top-written-in-vintage-metal-letterpress-type-on-a-soft-backlit-background-291004445.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -154,8 +153,7 @@
     min-height: 35rem;
     width: 100%;
     height: auto;
-    background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.3)),color-stop(75%,rgba(22,22,22,.7)),to(#161616)),url(../img/stock-photo-bartender-at-wine-cellar-full-of-bottles-with-exquisite-drinks-1035927961.jpg);
-    background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%,#161616 100%),url(../img/stock-photo-bartender-at-wine-cellar-full-of-bottles-with-exquisite-drinks-1035927961.jpg);
+    background: url(../img/stock-photo-abstract-twinkled-christmas-background-with-stars-113138596.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -168,8 +166,7 @@
     min-height: 40rem;
     width: 100%;
     height: auto;
-    background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.1)),color-stop(75%,rgba(22,22,22,.5)),to(#161616)),url(../img/stock-photo-closeup-pattern-background-of-many-different-wine-corks-with-dates-and-drops-of-wine-187463741.jpg);
-    background: linear-gradient(to bottom,rgba(22,22,22,.1) 0,rgba(22,22,22,.5) 75%,#161616 100%),url(../img/stock-photo-closeup-pattern-background-of-many-different-wine-corks-with-dates-and-drops-of-wine-187463741.jpg);
+    background: url(../img/stock-photo-closeup-pattern-background-of-many-different-wine-corks-with-dates-and-drops-of-wine-187463741.jpg);
     background-position: center
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -196,18 +193,28 @@
     padding: 14px;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    color: #f2f2f2;
+    color: #8B0000;
 }
+
+.result-table th:nth-child(1) {
+    text-align: left;
+}
+
 .result-table td {
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid #ddd;
     font-size: 1rem;
-    color: white;
+    color: #800000;
 }
+
+.result-table td:nth-child(1) {
+    text-align: left;
+}
+
 .result-table a {
     text-align: left;
-    color: white;
+    color: #800000;
 }
 
 /*.category-table {
