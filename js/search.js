@@ -15,7 +15,7 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
       	var item = store[results[i].ref];
-        var param =  item.title + "','" + item.valuepointimage + "','" + item.image + "','" + item.vintage + "','" + item.producer + "','" + item.country + "','" + item.region + "','" + item.subregion + "','" + item.tastingnotes;
+        var param =  item.title + "','" + item.valuepointimage + "','" + item.image + "','" + item.vintage + "','" + item.producer + "','" + item.country + "','" + item.region + "','" + item.subregion + "','" + item.tastingnotes + "','" + item.producerlink;
         
         appendString += '<tr>';
         appendString += '<td>';

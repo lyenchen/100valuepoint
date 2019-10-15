@@ -13,7 +13,7 @@
 
 		for (var i = 0; i < jsonObj.length; i++) {
 			if (jsonObj[i][category] == categoryvalue) {
-				var param = jsonObj[i].title + "','" + '{{ site.url }}' + jsonObj[i].valuepointimage + "','" + '{{ site.url }}' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes;
+				var param = jsonObj[i].title + "','" + '{{ site.url }}' + jsonObj[i].valuepointimage + "','" + '{{ site.url }}' + jsonObj[i].image + "','" + jsonObj[i].vintage + "','" + jsonObj[i].producer + "','" + jsonObj[i].country + "','" + jsonObj[i].region + "','" + jsonObj[i].subregion + "','" + jsonObj[i].tastingnotes + "','" + jsonObj[i].producerlink;
 				innerHTML += '<tr>';
 				innerHTML += '<td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo(\'' + param + '\')">' + jsonObj[i].title + '</a>';
 				innerHTML += '<div id="wineModal" class="modal fade" role="dialog">';

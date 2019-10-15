@@ -19,7 +19,7 @@
         		{% for wine in wines limit:20 %}
               <tr>
                 <td>{{ forloop.index }}</td>
-      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('{{ wine.title }}','{{ site.url }}{{ wine.valuepointimage }}','{{ site.url }}{{ wine.image }}','{{ wine.vintage }}','{{ wine.producer }}','{{ wine.country }}','{{ wine.region }}','{{ wine.subregion }}','{{ wine.tastingnotes }}')">{{ wine.title }}</a>
+      				  <td><a data-toggle="modal" href="#wineModal" onClick="displayWineInfo('{{ wine.title }}','{{ site.url }}{{ wine.valuepointimage }}','{{ site.url }}{{ wine.image }}','{{ wine.vintage }}','{{ wine.producer }}','{{ wine.country }}','{{ wine.region }}','{{ wine.subregion }}','{{ wine.tastingnotes }}','{{ wine.producerlink }}')">{{ wine.title }}</a>
                   <div id="wineModal" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-lg">
                       <div id="wineModalContent" class="container modal-content">

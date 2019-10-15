@@ -149,7 +149,7 @@
 
 .ourwine-section {
     position: relative;
-    padding: 8rem 0 0;
+    padding: 5rem 0 0;
     min-height: 35rem;
     width: 100%;
     height: auto;
@@ -242,7 +242,7 @@
 
 #winesDiv {
     position: relative;
-    padding: 5rem;
+    padding: 5px;
 }
 
 #rotating_zodiac {
