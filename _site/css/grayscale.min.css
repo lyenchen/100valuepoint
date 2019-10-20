@@ -63,8 +63,11 @@
     height: auto;
     min-height: 35rem;
     padding: 15rem 0 0;
-    background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.3)),color-stop(75%,rgba(22,22,22,.7)),to(#161616)),url(../img/stock-photo-wine-tasting-and-winemaking-photo-collage-with-wine-glasses-and-bottles-700590349.jpg);
+/*    background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.3)),color-stop(75%,rgba(22,22,22,.7)),to(#161616)),url(../img/stock-photo-wine-tasting-and-winemaking-photo-collage-with-wine-glasses-and-bottles-700590349.jpg);
     background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%,#161616 100%),url(../img/stock-photo-wine-tasting-and-winemaking-photo-collage-with-wine-glasses-and-bottles-700590349.jpg);
+
+*/    
+    background: url(../img/stock-photo-wine-tasting-and-winemaking-photo-collage-with-wine-glasses-and-bottles-700590349.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -354,8 +357,10 @@
 }
 .signup-section {
     padding: 8rem 0;
-    background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.1)),color-stop(75%,rgba(22,22,22,.5)),to(#161616)),url(../img/bg-signup.jpg);
+    /*background: -webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.1)),color-stop(75%,rgba(22,22,22,.5)),to(#161616)),url(../img/bg-signup.jpg);
     background: linear-gradient(to bottom,rgba(22,22,22,.1) 0,rgba(22,22,22,.5) 75%,#161616 100%),url(../img/bg-signup.jpg);
+    */
+    background: url(../img/bg-signup.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
