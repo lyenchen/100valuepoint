@@ -372,10 +372,10 @@
 </script>
 <section id="ourwine" class="ourwine-section bg-light">
 	<div class="container">
-		<div class="row">
-			<div class="sidenav col sm-2 col-md-2 col-lg-2">
-				<button class="dropdown-btn">Value Point<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+		<div class="navbar navbar-default row">
+			<div class="navbar-header sidenav col sm-2 col-md-2 col-lg-2">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Value Point<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					
 	        		
     	    			<a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','96-100')">96-100</a>
@@ -387,8 +387,8 @@
     	    			<a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','76-80')">76-80</a>
         			
 				</div>
-				<button class="dropdown-btn">Price<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Price<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					
 	    	    	
     	    			<a href="#winesDiv" onClick="displayWineByCategory('pricerange','35-50€')">35-50€</a>
@@ -400,8 +400,8 @@
     	    			<a href="#winesDiv" onClick="displayWineByCategory('pricerange','05-10€')">05-10€</a>
         			
 				</div>
-				<button class="dropdown-btn">Wine Style<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Wine Style<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					
 	        		
     	    			<a href="#winesDiv" onClick="displayWineByCategory('category','White')">White</a>
@@ -413,8 +413,8 @@
     	    			<a href="#winesDiv" onClick="displayWineByCategory('category','Red')">Red</a>
         			
 				</div>
-				<button class="dropdown-btn">Producer<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Producer<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					
 	        		
     	    			<a href="#winesDiv" onClick="displayWineByCategory('producer','Château Preuillac')">Château Preuillac</a>
@@ -424,15 +424,15 @@
     	    			<a href="#winesDiv" onClick="displayWineByCategory('producer','Château Julien')">Château Julien</a>
         			
 				</div>
-				<button class="dropdown-btn">Region<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Region<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					
 	        		
     	    			<a href="#winesDiv" onClick="displayWineByCategory('region','Bordeaux')">Bordeaux</a>
         			
 				</div>
-				<button class="dropdown-btn">Country<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Country<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					
 	        		
     	    			<a href="#winesDiv" onClick="displayWineByCategory('country','France')">France</a>
@@ -461,6 +461,20 @@
 		  });
 		}
 	</script>
+	<script>
+		$(function(){
+      
+			$(document).ready(function () {
+    			$(document).click(function (event) {
+        			var clickover = $(event.target);
+        			var _opened = $(".navbar-collapse").hasClass("navbar-collapse in");
+        			if (_opened === true && !clickover.hasClass("dropdown-btn")) {
+            			$("button.dropdown-btn").click();
+        			}
+    			});
+			});
+		});
+    </script>
 </section>
   <!-- Signup Section -->
   

@@ -34,45 +34,45 @@
 </script>
 <section id="ourwine" class="ourwine-section bg-light">
 	<div class="container">
-		<div class="row">
-			<div class="sidenav col sm-2 col-md-2 col-lg-2">
-				<button class="dropdown-btn">Value Point<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+		<div class="navbar navbar-default row">
+			<div class="navbar-header sidenav col sm-2 col-md-2 col-lg-2">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Value Point<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					{% assign wines = site.data.vintages | map: 'valuepointrange' | uniq | sort | reverse %}
 	        		{% for wine in wines %}
     	    			<a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','{{ wine }}')">{{ wine }}</a>
         			{% endfor %}
 				</div>
-				<button class="dropdown-btn">Price<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Price<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					{% assign wines = site.data.vintages | map: 'pricerange' | uniq | sort | reverse %}
 	    	    	{% for wine in wines %}
     	    			<a href="#winesDiv" onClick="displayWineByCategory('pricerange','{{ wine }}')">{{ wine }}</a>
         			{% endfor %}
 				</div>
-				<button class="dropdown-btn">Wine Style<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Wine Style<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					{% assign wines = site.data.vintages | map: 'category' | uniq | sort | reverse %}
 	        		{% for wine in wines %}
     	    			<a href="#winesDiv" onClick="displayWineByCategory('category','{{ wine }}')">{{ wine }}</a>
         			{% endfor %}
 				</div>
-				<button class="dropdown-btn">Producer<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Producer<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					{% assign wines = site.data.vintages | map: 'producer' | uniq | sort | reverse %}
 	        		{% for wine in wines %}
     	    			<a href="#winesDiv" onClick="displayWineByCategory('producer','{{ wine }}')">{{ wine }}</a>
         			{% endfor %}
 				</div>
-				<button class="dropdown-btn">Region<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Region<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					{% assign wines = site.data.vintages | map: 'region' | uniq | sort | reverse %}
 	        		{% for wine in wines %}
     	    			<a href="#winesDiv" onClick="displayWineByCategory('region','{{ wine }}')">{{ wine }}</a>
         			{% endfor %}
 				</div>
-				<button class="dropdown-btn">Country<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
+				<button class="dropdown-btn" data-toggle="collapse" data-target=".navbar-collapse">Country<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container navbar-collapse collapse">
 					{% assign wines = site.data.vintages | map: 'country' | uniq | sort | reverse %}
 	        		{% for wine in wines %}
     	    			<a href="#winesDiv" onClick="displayWineByCategory('country','{{ wine }}')">{{ wine }}</a>
@@ -101,4 +101,18 @@
 		  });
 		}
 	</script>
+	<script>
+		$(function(){
+      
+			$(document).ready(function () {
+    			$(document).click(function (event) {
+        			var clickover = $(event.target);
+        			var _opened = $(".navbar-collapse").hasClass("navbar-collapse in");
+        			if (_opened === true && !clickover.hasClass("dropdown-btn")) {
+            			$("button.dropdown-btn").click();
+        			}
+    			});
+			});
+		});
+    </script>
 </section>
