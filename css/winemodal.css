@@ -1,4 +1,7 @@
 /* The Modal (background) */
+#top20Table th:nth-child(1) td:nth-child(1) {
+    text-align: left;
+}
 
 .modal-header {
   color: black;

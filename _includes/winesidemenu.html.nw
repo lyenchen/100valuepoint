@@ -1,0 +1,132 @@
+<link href="css/sidenav.css" rel="stylesheet">
+<link href="css/winemodal.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.dataTables.min.css">
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script src="js/winemodal.js"></script>
+<script type="text/javascript">
+	var jsonObj = JSON.parse('{{ site.data.vintages | jsonify }}');
+	function displayWineByCategory(category, categoryvalue) {
+		var parentDiv = document.getElementById('winesDiv');
+		parentDiv.innerHTML = '';
+
+		for (var i = 0; i < jsonObj.length; i++) {
+			if (jsonObj[i][category] == categoryvalue) {
+				var tabObj = [{"title": jsonObj[i].title, "pointImageURL": '{{ site.url }}' + jsonObj[i].valuepointimage, "imageURL": '{{ site.url }}' + jsonObj[i].image, "vintage": jsonObj[i].vintage }];
+			}
+		}
+
+		$('#winestab').dataTable({
+			"data": tabObj,
+			"columns": [
+			{"data": "title"},
+			{"data": "pointImageURL",
+				"render": function(data, type, row, meta){
+					if(type === 'display') {
+						data = '<a href="' + data + '">' + data + '</a>';
+					}
+					return data;
+				}}
+
+			]
+		});
+		
+		var innerHTML = '<table id="winestab" class="display"><thead><tr>';
+		innerHTML += '<th>Name</th><th>Image</th>';
+		innerHTML += '</tr></thead></table>';
+		//alert(innerHTML);
+
+		parentDiv.innerHTML = innerHTML;
+
+	}
+</script>
+<section id="ourwine" class="ourwine-section bg-light">
+	<div class="row">
+	<nav class="navbar navbar-default sidenav col-sm-2 col-md-2 col-lg-2">
+	<div class="container">
+		<div class="navbar-default side-collapse open">
+			<div class="navbar-collapse">
+        		<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Value Point</a>
+						<ul class="dropdown-menu">
+							{% assign wines = site.data.vintages | map: 'valuepointrange' | uniq | sort | reverse %}
+	        				{% for wine in wines %}
+    	    					<li><a href="#winesDiv" onClick="displayWineByCategory('valuepointrange','{{ wine }}')">{{ wine }}</a></li>
+        					{% endfor %}
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Price</a>
+						<ul class="dropdown-menu">
+							{% assign wines = site.data.vintages | map: 'pricerange' | uniq | sort | reverse %}
+	    	    			{% for wine in wines %}
+    	    					<li><a href="#winesDiv" onClick="displayWineByCategory('pricerange','{{ wine }}')">{{ wine }}</a></li>
+        					{% endfor %}
+        				</ul>
+        			</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wine Style</a>
+						<ul class="dropdown-menu">
+							{% assign wines = site.data.vintages | map: 'category' | uniq | sort | reverse %}
+	        				{% for wine in wines %}
+    	    					<li><a href="#winesDiv" onClick="displayWineByCategory('category','{{ wine }}')">{{ wine }}</a></li>
+        					{% endfor %}
+        				</ul>
+        			</li>
+					
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Producer</a>
+						<ul class="dropdown-menu">
+							{% assign wines = site.data.vintages | map: 'producer' | uniq | sort | reverse %}
+	        				{% for wine in wines %}
+    	    					<li><a href="#winesDiv" onClick="displayWineByCategory('producer','{{ wine }}')">{{ wine }}</a></li>
+        					{% endfor %}
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Region</a>
+						<ul class="dropdown-menu">
+							{% assign wines = site.data.vintages | map: 'region' | uniq | sort | reverse %}
+	        				{% for wine in wines %}
+    	    					<li><a href="#winesDiv" onClick="displayWineByCategory('region','{{ wine }}')">{{ wine }}</a></li>
+        					{% endfor %}
+        				</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Country</a>
+						<ul class="dropdown-menu">
+							{% assign wines = site.data.vintages | map: 'country' | uniq | sort | reverse %}
+	        				{% for wine in wines %}
+    	    					<li><a href="#winesDiv" onClick="displayWineByCategory('country','{{ wine }}')">{{ wine }}</a></li>
+        					{% endfor %}
+        				</ul>
+        			</li>
+        		</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<div class="col-sm-1 col-md-1 col-lg-1"></div>
+<div id="winesDiv" class="col-sm-8 col-md-8 col-lg-8"></div>
+</div>
+	<!-- <script>
+		/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+		  dropdown[i].addEventListener("click", function() {
+		  this.classList.toggle("active");
+		  /*var dropdownContent = this.nextElementSibling;
+		  if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+		  } else {
+		  dropdownContent.style.display = "block";
+		  }*/
+		  });
+		}
+	</script> -->
+	<script>
+		$(function(){
+      		$(document).ready(function () {
+    			$('[data-toggle=collapse-side]').click(function(e) {
+    				$('.side-collapse').toggleClass('open');
+  				});
+			});
+		});
+    </script>
+</section>

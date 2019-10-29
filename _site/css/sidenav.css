@@ -24,6 +24,16 @@
   outline: none;
 }
 
+/*.navbar-side .side-collapse {
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    width: 256px;
+    position: fixed;
+    overflow: auto;
+    transition: all 0.3s cubic-bezier(.87, -.41, .19, 1.44);
+}*/
+
 .dropdown-btn {
   color: black;
 }
@@ -42,10 +52,10 @@
 }
 
 /* Add an active class to the active dropdown button */
-.active {
+/*.active {
   background-color: green;
   color: white;
-}
+}*/
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
