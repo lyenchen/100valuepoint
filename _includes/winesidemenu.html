@@ -45,25 +45,7 @@
 				$('#ourwines').dataTable().fnAddData([
 					jsonObj[i].title,
 					jsonObj[i].vintage,
-					jsonObj[i].valuepoint,
-					jsonObj[i].category,
-					jsonObj[i].producer,
-					jsonObj[i].country,
-					jsonObj[i].region,
-					jsonObj[i].subregion,
-					jsonObj[i].classification,
-					jsonObj[i].grapevariety,
-					jsonObj[i].tastingnotes,
-					jsonObj[i].zodiac,
-					jsonObj[i].guideprice,
-					jsonObj[i].valuepointrange,
-					jsonObj[i].valuepointimage,
-					jsonObj[i].pricerange,
-					jsonObj[i].datetasted,
-					jsonObj[i].producerlink,
-					jsonObj[i].wheretobuy,
-					jsonObj[i].location,
-					jsonObj[i].image
+					jsonObj[i].valuepoint
 				]);
 			}
 		}
@@ -75,19 +57,28 @@
     				$('.side-collapse').toggleClass('open');
   				});
   				$('#ourwines').dataTable({
-  					"ajax": {{ site.data.vintages | jsonify}},
+  					"data": {{ site.data.vintages | jsonify}},
   					"lengthChange": false,
                 	"ordering": false,
                 	"searching": false,
                 	"info": false,
                 	"pagingType": "simple",
+        			"deferLoading": 0,
                 	"columnDefs": [
-                		{title: "Wine Name",
+                		{"defaultContent": "-",
+    				 	"targets": 0},
+                		{"targets": [0],
+                			"data": "title",
+                			"title": "Wine Name",
                 			render: function(data, type, row, meta) {
-                			return '<a href="#">' + data + row[3] + '</a>'
+                			return '<a href="#">' + data + data."vintage" + '</a>'
                 		}},
-                		{title: "Vintage"},
-                		{title: "Value Point"}
+                		{"targets": [1],
+                			"data": "vintage",
+                			"title": "Vintage"},
+                		{"targets": [2],
+                			"data": "valuepoint",
+                			"title": "Value Point"}
                 		// {"mDataProp": "jsonObj.title", "title": "Wine Name"},
                 		// {"mDataProp": "vintage", "title": "Vintage"},
                 		// {"mDataProp": "valuepoint", "title": "Value Point"},
