@@ -405,10 +405,11 @@
     				 	"targets": 0},
                 		{"targets": [0],
                 			"data": "title",
-                			"title": "Wine Name",
-                			render: function(data, type, row, meta) {
-                			return '<a href="#">' + data + data."vintage" + '</a>'
-                		}},
+                			"title": "Wine Name"
+                			/*render: function(data, type, row, meta) {
+                			return '<a href="#wineModal" onClick="displayWineInfo(\''+ row.title + '\',' + '\'http://localhost:4000' + row.valuepointimage + '\')">' + data + row.region + '</a><div id="wineModal" class="modal fade" role="dialog"><div class="modal-dialog modal-lg"><div id="wineModalContent" class="container modal-content"></div></div></div>'
+                		}*/
+                	},
                 		{"targets": [1],
                 			"data": "vintage",
                 			"title": "Vintage"},
