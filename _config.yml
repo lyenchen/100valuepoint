@@ -17,7 +17,7 @@ title: 100 Value Point
 email: lyenchen@yahoo.com
 description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://100valuepoint.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://100valuepoint.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
